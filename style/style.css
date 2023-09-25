@@ -1,0 +1,101 @@
+/* Define CSS variables */
+:root {
+    --bg-black-900: #f2f2fc;
+    --bg-black-100: #fdf9ff;
+    --bg-black-50: #e8dfec;
+    --text-black-900: #302e4d;
+    --text-black-700: #504e70;
+}
+
+/* Dark mode styles */
+body.dark {
+    --bg-black-900: #151515;
+    --bg-black-100: #222222;
+    --bg-black-50: #393939;
+    --text-black-900: #ffffff;
+    --text-black-700: #e9e9e9;
+}
+
+/* Navbar styles */
+.nav-ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 20px;
+    background-color: transparent;
+}
+
+.nav-el {
+    display: inline;
+    margin-right: 25px;
+}
+
+a {
+    color: var(--bg-black-100);
+    text-decoration: none;
+}
+
+.container {
+    background-image: url('../assets/bac.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+.hero-section {
+    color: white;
+    text-align: center;
+    padding: 100px;
+}
+
+.hero-section h1 {
+    font-size: 3em;
+    margin-bottom: 20px;
+}
+
+.hero-section p {
+    font-size: 1.5em;
+}
+
+/* Card container styles */
+.card-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 20px;
+}
+
+/* Card styles */
+.card {
+    width: calc(33.33% - 20px);
+    border: 0px solid #ccc;
+    padding: 80px;
+    text-align: center;
+    /* transition: transform 0.3s; */
+    box-sizing: border-box;
+    margin-bottom: 20px;
+}
+
+/* Card hover effect */
+.card img:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Image styles */
+.card img {
+    transition: transform 0.3s;
+    border-radius: 50%;
+    width: 100%;
+    height: auto;
+}
+
+/* Text below image styles */
+.card-text {
+    margin-top: 10px;
+}
+
+/* Media query for mobile devices */
+@media (max-width: 767px) {
+    .card {
+        width: calc(100% - 20px);
+    }
+}
