@@ -1,83 +1,217 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>my page</title>
-    <link rel="stylesheet" href="./style/style.css">
+<html lang="kn">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ಕರ್ವಾಲೊ ಬಳಗ</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+Kannada:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      body {
+        margin: 0;
+        font-family: "Noto Sans Kannada", sans-serif;
+        background-color: #f4f8f9;
+        color: #222;
+      }
 
-</head>
-<body>
-    <div class="container home">
+      nav {
+        background-color: #004d40;
+        padding: 15px 0;
+        text-align: center;
+      }
+
+      .nav-ul {
+        list-style: none;
+        display: flex;
+        justify-content: center;
+        gap: 30px;
+        margin: 0;
+        padding: 0;
+      }
+
+      .nav-el a {
+        color: #fff;
+        text-decoration: none;
+        font-size: 18px;
+        font-weight: bold;
+        transition: color 0.3s ease;
+      }
+
+      .nav-el a:hover {
+        color: #80cbc4;
+      }
+
+      .hero-section {
+        background: linear-gradient(to right, #e0f7fa, #b2dfdb);
+        padding: 60px 20px;
+        text-align: center;
+        animation: fadeInDown 1s ease-out;
+      }
+
+      .hero-section h1 {
+        font-size: 40px;
+        color: #004d40;
+        margin-bottom: 20px;
+      }
+
+      .hero-section p {
+        font-size: 20px;
+        margin-bottom: 30px;
+      }
+
+      .btn {
+        background-color: #00695c;
+        color: white;
+        padding: 12px 24px;
+        border-radius: 30px;
+        text-decoration: none;
+        font-weight: bold;
+        transition: background-color 0.3s ease, transform 0.3s ease;
+      }
+
+      .btn:hover {
+        background-color: #004d40;
+        transform: scale(1.05);
+      }
+
+      .card-container {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 20px;
+        padding: 40px;
+      }
+
+      .card {
+        background-color: #ffffff;
+        border-radius: 15px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        overflow: hidden;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+      }
+
+      .card:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+      }
+
+      .card img {
+        width: 100%;
+        height: 200px;
+        object-fit: cover;
+      }
+
+      .card-text {
+        padding: 20px;
+        text-align: center;
+      }
+
+      .card-text h2 {
+        font-size: 22px;
+        color: #00695c;
+        margin-bottom: 10px;
+      }
+
+      .card-text p {
+        font-size: 16px;
+        color: #555;
+      }
+
+      @keyframes fadeInDown {
+        from {
+          opacity: 0;
+          transform: translateY(-20px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      .footer {
+        background-color: #004d40;
+        color: #ffffff;
+        text-align: center;
+        padding: 15px 10px;
+        font-size: 16px;
+      }
+    </style>
+  </head>
+  <body>
     <nav>
-        <ul class="nav-ul ">
-          <li class="nav-el"><a href="#">Home</a></li>
-          <li class="nav-el"><a href="#">About</a></li>
-          <li class="nav-el"><a href="#">Blog</a></li>
-          <li class="nav-el"><a href="#">Contact</a></li>
-        </ul>
-      </nav>
-        <div class="hero-section">
-            <h1>ಕರ್ವಾಲೊ ಬಳಗಕ್ಕೆ  ಸ್ವಾಗತ </h1>
-            <p>ಮಲೆನಾಡೆಂಬ ಮಾಯಾಲೋಕದ ಬಗ್ಗೆ ಮಾಹಿತಿ ನೀಡುವ ಕಿರು ಪ್ರಯತ್ನ .</p>
-            <a href="#about" class="btn">ಹೆಚ್ಚಿನ ಮಾಹಿತಿ...</a>
-        </div>
+      <ul class="nav-ul">
+        <li class="nav-el"><a href="#">ಮುಖಪುಟ</a></li>
+        <li class="nav-el"><a href="#">ನಮ್ಮ ಬಗ್ಗೆ</a></li>
+        <li class="nav-el"><a href="#">ಬ್ಲಾಗ್</a></li>
+        <li class="nav-el"><a href="#">ಸಂಪರ್ಕಿಸಿ</a></li>
+      </ul>
+    </nav>
 
+    <div class="hero-section">
+      <h1>ಕರ್ವಾಲೊ ಬಳಗಕ್ಕೆ ಸ್ವಾಗತ</h1>
+      <p>ಮಲೆನಾಡೆಂಬ ಮಾಯಾಲೋಕದ ಬಗ್ಗೆ ಮಾಹಿತಿ ನೀಡುವ ಕಿರು ಪ್ರಯತ್ನ.</p>
+      <a href="#cards" class="btn">ಹೆಚ್ಚಿನ ಮಾಹಿತಿ...</a>
     </div>
 
-    <div class="card-container">
-        <div class="card">
-          <img src="./assets/kuvempu4.png" alt="Image 1">
-          <div class="card-text">
-            <h2>ಪ್ರಸಿದ್ದ ವ್ಯಕ್ತಿಗಳು</h2>
-            <p>Some text describing card 1.</p>
-          </div>
-        </div>
-      
-        <div class="card">
-          <img src="https://via.placeholder.com/200" alt="Image 2">
-          <div class="card-text">
-            <h2>ಪ್ರೇಕ್ಷಣೀಯ ಸ್ಥಳಗಳು</h2>
-            <p>Some text describing card 2.</p>
-          </div>
-        </div>
-      
-        <div class="card">
-          <img src="https://via.placeholder.com/200" alt="Image 2">
-          <div class="card-text">
-            <h2>ಸಂಸ್ಕೃತಿ</h2>
-            <p>Some text describing card 2.</p>
-          </div>
-        </div>
-      
-        <div class="card">
-          <img src="https://via.placeholder.com/200" alt="Image 2">
-          <div class="card-text">
-            <h2>ಜೀವ ವೈವಿಧ್ಯ </h2>
-            <p>Some text describing card 3.</p>
-          </div>
-        </div>
-      
-        <div class="card">
-          <img src="https://via.placeholder.com/200" alt="Image 2">
-          <div class="card-text">
-            <h2>ಐತಿಹಾಸಿಕ ಸ್ಥಳಗಳು </h2>
-            <p>Some text describing card 4.</p>
-          </div>
-        </div>
-      
-        <div class="card">
-          <img src="https://via.placeholder.com/200" alt="Image 3">
-          <div class="card-text">
-            <h2>Card 3</h2>
-            <p>Some text describing card numbeer 5.</p>
-          </div>
+    <div class="card-container" id="cards">
+      <!-- Card 1 -->
+      <div class="card">
+        <img src="./assets/kuvemp.webp" alt="ಕುವೆಂಪು" />
+        <div class="card-text">
+          <h2>ಪ್ರಸಿದ್ದ ವ್ಯಕ್ತಿಗಳು</h2>
+          <p>ಕುವೆಂಪು, ತೇಜಸ್ವಿ, ಡಿವಿಜಿ ಮುಂತಾದ ಮಲೆನಾಡಿನ ಹೆಮ್ಮೆಯ ಚಿಂತಕರು.</p>
         </div>
       </div>
-     
-    
-</body>
+
+      <!-- Card 2 -->
+      <div class="card">
+        <img src="./assets/jog.jpg" alt="ಪ್ರೇಕ್ಷಣೀಯ ಸ್ಥಳಗಳು" />
+        <div class="card-text">
+          <h2>ಪ್ರೇಕ್ಷಣೀಯ ಸ್ಥಳಗಳು</h2>
+          <p>ಜೋಗ ಜಲಪಾತ, ಆಗುಂಬೆ, ಕುದ್ರೆಮುಖ, ಶೃಂಗೇರಿ ಮೊದಲಾದ ನೈಸರ್ಗಿಕ ವೈಭವ.</p>
+        </div>
+      </div>
+
+      <!-- Card 3 -->
+      <div class="card">
+        <img src="./assets/yakshagana.jpg" alt="ಸಂಸ್ಕೃತಿ" />
+        <div class="card-text">
+          <h2>ಸಂಸ್ಕೃತಿ</h2>
+          <p>ಯಕ್ಷಗಾನ, ಗ್ರಾಮೀಣ ಜಾತ್ರೆಗಳು ಮತ್ತು ಸಂಪ್ರದಾಯಗಳ ಸೊಬಗು.</p>
+        </div>
+      </div>
+
+      <!-- Card 4 -->
+      <div class="card">
+        <img src="./assets/liont.webp" alt="ಮೆಕ್ಕೆ ನರಿ" />
+        <div class="card-text">
+          <h2>ಜೀವ ವೈವಿಧ್ಯ</h2>
+          <p>ಮಲೆನಾಡಿನ ವನ್ಯಜೀವಿಗಳಲ್ಲಿ ಮೆಕ್ಕೆ ನರಿ, ಮಾಲಬಾರ್ ಬೆಕ್ಕು ಪ್ರಮುಖ.</p>
+        </div>
+      </div>
+
+      <!-- Card 5 -->
+      <div class="card">
+        <img src="./assets/sringeri.jpg" alt="ಶೃಂಗೇರಿ" />
+        <div class="card-text">
+          <h2>ಐತಿಹಾಸಿಕ ಸ್ಥಳಗಳು</h2>
+          <p>ಶೃಂಗೇರಿ ಶಾರದಾ ಪೀಠ, ಕೆಳದಿ ಕೋಟೆ, ಬಳ್ಳಿಗಾವಿಯ ದೇವಾಲಯಗಳು.</p>
+        </div>
+      </div>
+
+      <!-- Card 6 -->
+      <div class="card">
+        <img src="./assets/bac.jpg" alt="ಮಲೆನಾಡು" />
+        <div class="card-text">
+          <h2>ಇತರೆ</h2>
+          <p>ಮಲೆನಾಡಿನ ಆಹಾರ, ಮಳೆಗಾಲದ ದೃಶ್ಯಗಳು, ಹಸಿರು ಅಡಿಕೆ ತೋಟಗಳು.</p>
+        </div>
+      </div>
+    </div>
+
+    <footer class="footer">
+      © 2025 ಕರ್ವಾಲೊ ಬಳಗ – ಎಲ್ಲಾ ಹಕ್ಕುಗಳು ಕಾಯ್ದಿರಿಸಲಾಗಿದೆ.
+    </footer>
+  </body>
 </html>
-
-
-
